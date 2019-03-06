@@ -1,0 +1,35 @@
+---
+- hosts: slave
+  tasks:
+  - name: Create user
+    user: 
+      name: testuser
+      state: present
+  - name: Change Timezone
+    timezone: 
+      name: Asia/Kolkata
+  - name: Uploading file to testuser
+    copy:
+      src: /root/testfile
+      dest: /home/testuser/testfile
+  - name: Installing python
+    apt:
+      name: python
+      state: present
+  - name: Installaing supervisord
+    apt:
+      name: supervisor
+      state: present
+  - name: Installing unzip
+    apt: 
+      name: unzip
+      state: present
+  - name: get consul package
+    get_url:
+      url: https://releases.hashicorp.com/consul/1.4.3/consul_1.4.3_linux_amd64.zip
+      dest: /tmp/consul_1.4.3_linux_amd64.zip
+  - name: Unzip package
+    unarchive:
+      src: /tmp/consul_1.4.3_linux_amd64.zip
+      dest: /usr/local/bin
+      remote_src: yes
