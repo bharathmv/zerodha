@@ -1,0 +1,8 @@
+Vagrant:
+1. Run on Google Cloud Environment
+2. Run on Centos 7
+
+Ansible:
+1. Run on Google Cloud Environment
+2. Run on Centos 7 
+3. IP of vagrant vm is configured in /etc/ansible/host file
