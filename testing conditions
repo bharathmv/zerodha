@@ -1,6 +1,7 @@
 Vagrant:
-1. Run on Google Cloud Environment
+1. Should be run on linux host
 2. Run on Centos 7
+3. The vagrant vm creation is different for different cloud providers as they have disabled virtualisation by default
 
 Ansible:
 1. Run on Google Cloud Environment
