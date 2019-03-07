@@ -1,5 +1,5 @@
 Vagrant:
-1. Should be run on linux host
+1. Should be run on Centos 7 host
 2. Run on Centos 7
 3. The vagrant vm creation is different for different cloud providers as they have disabled virtualisation by default
 
